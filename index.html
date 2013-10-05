@@ -29,27 +29,7 @@
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 
-        <!-- Customized Styles -->
-        <style type="text/css">
-        /* Shadows for all screenshot slides */
-        .shadowh2 h2,
-        .shadowh2 h1 {
-          padding: 30px;
-          background-color: rgba(0,0,0,0.7);
-          border-radius: 20px;
-          border: 1px solid rgba(255,255,255,0.7);
-          box-shadow: 0 0 45px #000 inset;
-        }
-        .reveal section a img.logo,
-        .reveal section img.logo {
-          border: none;
-          background: none;
-          box-shadow:none;
-        }
-        .faded {
-          color: rgba(255,255,255,0.5);
-        }
-        </style>
+        <link rel="stylesheet" href="css/custom.css">
 	</head>
 
 	<body>
@@ -59,7 +39,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h2>The newest developments in digital ecommerce</h2>
+					<h2>The newest developments in digital e-commerce</h2>
 					<p>
 						<small>Jonathan Sacksick / <a href="http://www.twitter.com/jsacksick">@jsacksick</a></small>
 					</p>
@@ -76,6 +56,9 @@
                 <section>
                   <img src="media/cg.png" class="logo" /><br /><br /><br />
                   <p>Paris, France &nbsp; &middot; &nbsp; London, England  &nbsp; &middot; &nbsp; Ann Arbor, MI, USA</p>
+                  <aside class="notes">
+                    Contribute to Drupal core and contrib, vc funded...
+                  </aside>
                 </section>
                 <section class="shadowh2">
                   <section>
@@ -83,18 +66,33 @@
                   </section>
                   <section data-background="media/dc-2-classicdriver.jpg" data-background-position="top center">
                       <h2>Built from scratch on Drupal 7</h2>
+                      <aside class="notes">
+                          Commerce doesn't reinven the whell, it uses the core concepts, entities, etc.
+                      </aside>
                   </section>
                   <section data-background="media/dc-1-cartier.jpg" data-background-position="top center">
                       <h2>Minimalistic and flexible</h2>
+                      <aside class="notes">
+                          Commerce doesn't make any assumption, you can sell physical &amp; digital products, you can remove the cart...
+                      </aside>
                   </section>
                   <section data-background="media/dc-3-eurocentre.png" data-background-position="top center">
                       <h2>Uses Views for all listings</h2>
+                      <aside class="notes">
+                          It was a bit experimental at the time, but it feels natural now, this allows you to change columns, add filters, different sort criterias, change the backend (switch to solr)...
+                      </aside>
                   </section>
                   <section data-background="media/dc-4-eurostar.png" data-background-position="top center">
                       <h2>Uses Rules for business logic</h2>
+                      <aside class="notes">
+                          Similar to a hook, you can respond to events, disable a rule, update the weight...<br/> Rules for selecting payment methods, tax rate etc.
+                      </aside>
                   </section>
                   <section data-background="media/dc-5-krispy.png" data-background-position="top center">
                       <h2>Relies on "essential contribs" and distributions to complete the experience</h2>
+                      <aside class="notes">
+                          We have contrib modules for Shipping, modules for selling access to files... <br/>The problem with a lean core is that Commerce doesn't do a lot by default, you need the contrib modules, to have sthg demoable this could take time, that's why we created Kickstart.
+                      </aside>
                   </section>
                 </section>
 
@@ -111,29 +109,35 @@
                   <section data-background="media/ck-3-admin.png" data-background-position="top center">
                       <h2>Streamlined administration optimized for common tasks</h2>
                       <aside class="notes">
-                          We revisited the administration and contributed the admin theme (Shiny), the admin views (Commerce Backoffice).
+                          We revisited the administration and contributed the admin theme (Shiny), the admin views (Commerce Backoffice). <br/> Bojhan summers worked on the UI.
                       </aside>
                   </section>
                   <section data-background="media/ck-2-responsive.jpg" data-background-position="top center">
-                <h2>Responsive frontend theme</h2>
+                      <h2>Responsive frontend theme</h2>
+                      <aside class="notes">
+                          We built a theme based on Omega, Omega Kickstart.
+                      </aside>
                   </section>
                   <section data-background="media/ck-4-zoom.png" data-background-position="top center">
-                <h2>Enhanced product marketing <br /> (image zooms, slideshows, etc)</h2>
+                      <h2>Enhanced product marketing <br /> (image zooms, slideshows, etc)</h2>
                   </section>
                   <section data-background="media/ck-5-facet.png" data-background-position="top center">
                       <h2>Faceted product search</h2>
+                      <aside class="notes">
+                          We contributed Commerce Search API, that creates a preconfigured index that knows automatically about your data structure...
+                      </aside>
                   </section>
                   <section data-background="media/ck-6-marketplace.png" data-background-position="top center">
-                <h2>Built-in payment gateways, <br /> third party tools</h2>
+                      <h2>Built-in payment gateways, <br /> third party tools</h2>
+                      <aside class="notes">
+                          When you install Kickstart we try to install the correct payment gateway based on your country, talk about the direct integration with the Marketplace...
+                      </aside>
                   </section>
                 </section>
 
                 <section>
-                     <h1>Context</h1>
+                     <h2>Context / Requirements</h2>
                     <img src="media/logo-marketplace.png" class="logo" alt=""/>
-                 </section>
-                 <section class="shadowh2" data-background="media/requirements.jpg" data-background-position="top center">
-                     <h1>Requirements</h1>
                  </section>
 
                 <section>
@@ -150,7 +154,8 @@
                 </section>
 
                 <section>
-                    <h2>Handle renewable subscriptions (Commerce Platform)</h2>
+                    <h2>Handle renewable subscriptions</h2>
+                    <h3>(Commerce Platform)</h3>
                     <img src="media/platform.png" class="logo" alt=""/>
                     <aside class="notes">
                         This implies recurring billing, subscription renewal...
@@ -158,6 +163,14 @@
                 </section>
 
                 <section>
+                    <h2>I need a way to track the user's right to access a resource</h2>
+                    <aside class="notes">
+                        Our problem is that we have no way of tracking the user's right to access something.<br/>
+                        A user completes checkout, you give him a role to track access, but the "API" stops there. No expiration, nothing
+                    </aside>
+                </section>
+
+                <!-- <section>
                     <h2>Existing solutions</h2>
                     <ul>
                         <li class="fragment">Commerce Subscription</li>
@@ -167,53 +180,88 @@
              		    <li class="fragment"><em>... And more.</em></li>
                     </ul>
                     <aside class="notes">
-                        Many modules were trying to solve the same issues, duplication of code... They weren't feature complete.
+                        Many modules were trying to solve the same issues, duplication of code... They weren't feature complete.<br/>
+                        Commerce Subscription (only buying a role).
                		</aside>
-                </section>
+                </section> -->
 
                 <section>
-                    <h2>Solutions we built</h2>
+                    <h2>Solutions</h2>
                 </section>
-
-                <section>
-                    <h3>Commerce License &amp; Commerce License Billing</h3>
-                    <img src="media/commerce_license.png" class="logo" alt=""/>
-                </section>
-
-                <section>
-                    <h2>Commerce License (what is it?)</h2>
-                    <ul>
-                        <li class="fragment">It's a framework for selling access to local or remote resources.</li>
-                        <li class="fragment">License types are ctools plugins (Thanks to Entity Bundle Plugin)</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Commerce License (Features)</h2>
-                    <ul>
-                        <li class="fragment">Defines a License entity type.</li>
-                        <li class="fragment">License types are are implemented as classes (thanks to Entity Bundle Plugin).</li>
-                    </ul>
-                </section>
-
-				<section data-transition="none">
-                    <h2>Data model</h2>
-                    <img src="media/entities_schema_no_square_1.png" class="logo" alt=""/>
-				</section>
 
                 <section data-transition="none">
-                    <h2>Data model</h2>
+                    <h2>A separate entity type</h2>
+                    <img src="media/entities_schema_no_square_1.png" class="logo" alt=""/>
+                </section>
+
+                <section data-transition="none">
+                    <h2>A separate entity type</h2>
                     <img src="media/entities_schema_no_square_2.png" class="logo" alt=""/>
                 </section>
 
                 <section data-transition="none">
-                    <h2>Data model</h2>
+                    <h2>A separate entity type</h2>
                     <img src="media/entities_schema_no_square_3.png" class="logo" alt=""/>
                 </section>
 
                 <section data-transition="none">
-                    <h2>Data model</h2>
+                    <h2>A separate entity type</h2>
                     <img src="media/entities_schema_no_square_4.png" class="logo" alt=""/>
+                </section>
+                <section>
+                    <section>
+                        <h3>Commerce License</h3>
+                        <img src="media/commerce-license.png" alt=""/>
+                    </section>
+                    <section>
+                        <h2>What is it?</h2>
+                        <p>It's a <span class="blue-hl">framework</span> for selling access to local or remote resources.</p>
+                    </section>
+                    <section>
+                        <h2>Features</h2>
+                        <p>A license can be <span class="blue-hl">configurable</span> and have fields that are filled-in by the user</p>
+                        <img src="media/turbo-tickets-form.png" alt=""/>
+                    </section>
+                    <section>
+                        <h2>Features</h2>
+                        <p>A license can be <span class="blue-hl">remote/synchronized</span> with a remote service.</p>
+                        <img src="media/license-sync-completed.png" alt=""/>
+                    </section>
+                    <section>
+                        <h2>Features</h2>
+                        <p>Licenses can be <span class="blue-hl">time limited</span>, and are automatically expired.</p>
+                        <img src="media/commerce-license-configuration-2.png" alt=""/>
+                    </section>
+                </section>
+
+                <section data-transition="none">
+                    <h2>Commerce License (features)</h2>
+                    <ul>
+                        <li>Licenses can be time limited, and are automatically expired (by cron) once that time passes.</li>
+                        <li class="fragment">Remote licenses are <span class="blue-hl">synchronizable.</span></li>
+                        <li class="fragment">A checkout pane shows the access details in the complete page during checkout.</li>
+                    </ul>
+                    <aside class="notes">
+                        Talk about advandcedqueue. The remote service can be contacted each time the status changes.
+               		</aside>
+                </section>
+
+                <section>
+                    <h2>Commerce License billing (features)</h2>
+                    <ul>
+                        <li>Handles <span class="blue-hl">prepaid/postpaid</span> products.</li>
+                        <li class="fragment">Handles <span class="blue-hl">prorated</span> payments.</li>
+                        <li class="fragment">Handles <span class="blue-hl">recurring</span> billing for licenses.</li>
+                        <li class="fragment">Handles <span class="blue-hl">usage based billing</span>.</li>
+                    </ul>
+                    <aside class="notes">
+                        Very complex to build, doesn't have a release yet. Speak about the billing cycle types.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Configuration</h2>
+                    <img src="media/commerce-license-billing-configuration.png" alt=""/>
                 </section>
 
                 <section>
@@ -225,8 +273,12 @@
                     <ul>
                         <li>Commerce License <br/><a href="http://www.drupal.org/project/commerce_license">http://drupal.org/project/commerce_license</a></li>
                         <li>Commerce License Billing <br/><a href="http://www.drupal.org/project/commerce_license_billing">http://drupal.org/project/commerce_license_billing</a></li>
+                        <li>Commerce Dunning <br/><a href="http://www.drupal.org/project/commerce_dunning">http://drupal.org/project/commerce_dunning</a></li>
                         <li>Commerce Guys Marketplace <br/><a href="http://marketplace.commerceguys.com">http://marketplace.commerceguys.com</a></li>
                     </ul>
+                </section>
+                <section>
+                    <h2>Questions?</h2>
                 </section>
 
 			</div>

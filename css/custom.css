@@ -1,0 +1,21 @@
+/* Shadows for all screenshot slides */
+.shadowh2 h2,
+.shadowh2 h1 {
+  padding: 30px;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow: 0 0 45px #000 inset;
+}
+.reveal section a img.logo,
+.reveal section img.logo {
+  border: none;
+  background: none;
+  box-shadow:none;
+}
+.faded {
+  color: rgba(255,255,255,0.5);
+}
+.blue-hl {
+  color: #1b91ff;
+}
