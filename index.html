@@ -63,11 +63,14 @@
                 <section class="shadowh2">
                   <section>
                       <img src="media/dc.png" class="logo"  />
+                      <aside class="notes">
+                          More than 30K reported installs, around 260K downloads.
+                      </aside>
                   </section>
                   <section data-background="media/dc-2-classicdriver.jpg" data-background-position="top center">
                       <h2>Built from scratch on Drupal 7</h2>
                       <aside class="notes">
-                          Commerce doesn't reinven the whell, it uses the core concepts, entities, etc.
+                          Commerce doesn't reinvent the wheel, it uses the core concepts, entities, etc.
                       </aside>
                   </section>
                   <section data-background="media/dc-1-cartier.jpg" data-background-position="top center">
@@ -170,9 +173,9 @@
                     </aside>
                 </section>
 
-                <section>
+                <!--<section>
                     <h2>Solutions</h2>
-                </section>
+                </section>-->
 
                 <section data-transition="none">
                     <h2>A separate entity type</h2>
@@ -197,6 +200,9 @@
                     <section>
                         <h3>Commerce License</h3>
                         <img src="media/commerce-license.png" alt=""/>
+                        <aside class="notes">
+                            Nested slides.
+                        </aside>
                     </section>
                     <section>
                         <h2>What is it?</h2>
@@ -209,7 +215,7 @@
                     </section>
                     <section>
                         <h2>Features</h2>
-                        <p>A license can be <span class="blue-hl">remote/synchronized</span> with a remote service.</p>
+                        <p>A license can be <span class="blue-hl">remote/synchronized</span> with an external service.</p>
                         <img src="media/license-sync-completed.png" alt=""/>
                     </section>
                     <section>
@@ -220,25 +226,85 @@
                 </section>
 
                 <section>
-                    <h2>Commerce License billing (features)</h2>
-                    <ul>
-                        <li>Handles <span class="blue-hl">prepaid/postpaid</span> products.</li>
-                        <li class="fragment">Handles <span class="blue-hl">prorated</span> payments.</li>
-                        <li class="fragment">Handles <span class="blue-hl">recurring</span> billing for licenses.</li>
-                        <li class="fragment">Handles <span class="blue-hl">usage based billing</span>.</li>
-                    </ul>
+                    <h2>Commerce file 2.x</h2>
+                    <img src="media/commerce-file.png" alt="" style="margin-top:0;"/>
                     <aside class="notes">
-                        Very complex to build, doesn't have a release yet. Speak about the billing cycle types.
+                        Allows access to files to be sold (one or multiple files attached to a product)<br/>
+                        Licensed files can be downloaded or streamed. Number of downloads / streams can be limited.<br/>
+                        Full Amazon S3 integration (triggering a download gets the file from S3 without touching our server).
+                    </aside>
+                </section>
+
+                <section class="shadowh2" data-background="media/recurring.jpg">
+                    <h2>Recurring?</h2>
+                    <aside class="notes">
+                        Recurring is really hard to implement. Explain async &amp; sync concepts. Talk about Recurly.
                     </aside>
                 </section>
 
                 <section>
-                    <h2>Configuration</h2>
-                    <img src="media/commerce-license-billing-configuration.png" alt=""/>
+                    <h2>Payment</h2>
+                    <p>You need a payment module with <span class="blue-hl">Card on File</span> support.</p>
+                    <img src="media/commerce-cardonfile.png" alt="" style="margin-top: 0;"/>
+                    <aside class="notes">
+                        You need to store credit card information to process further payments<br/>
+                        Auth.net, Paymill, explain the token stored. we need a capable COF payment method.<br/>
+                        Handle 0$ auth.
+                    </aside>
                 </section>
 
                 <section>
-                    <h2>Demo</h2>
+                    <h2>Dunning process</h2>
+                    <p>What happens if I can't charge the user anymore?</p>
+                    <img src="media/commerce-dunning.png" alt="" style="margin-top: 0;"/>
+                    <aside class="notes">
+                        Dunning management (Delinquent User Notification) is the automated process that's kicked off when a charge attempt of a recurring order fails.<br/>
+                        This process involves periodic customer communication and payment retries.
+                        Soft decline (When the daily limit of the card has been exceeded)<br/>
+                        Hard decline (Card is expired, cannot charge anymore).
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Commerce recurring</h2>
+                    <img src="media/commerce-recurring.png" alt="" style="margin-top:0;"/>
+                    <aside class="notes">
+                        Only support async prepaid billing (No post-payment). Because sync billing is really hard to implement.<br/>
+                        Talk about prorated payment, doesn't handle metered billing.
+                    </aside>
+                </section>
+
+                <section class="shadowh2" data-background="media/recurring-headache.jpg" data-background-position="top center">
+                    <h2>Synchronous billing is really hard to implement...</h2>
+                    <aside class="notes">
+                        It's really hard to implement because of prorating, If someone subscribe to a service on the 19th...
+                    </aside>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Commerce License billing</h2>
+                        <img src="media/commerce-license-billing.png" alt=""/>
+                        <aside class="notes">
+                            Doesn't have a release yet.. Nested slides.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>What is it?</h2>
+                        <p>Commerce License Billing provides advanced <span class="blue-hl">recurring</span> billing for licenses.</p>
+                    </section>
+                    <section>
+                        <h2>Features</h2>
+                        <p>It supports <span class="blue-hl">post payment</span> and <span class="blue-hl">estimation</span> calculation.</p>
+                        <img src="media/post-payment-example.png" alt=""/>
+                    </section>
+                    <section>
+                        <h2>Features</h2>
+                        <p>It supports <span class="blue-hl">metered</span> billing.</p>
+                        <p class="fragment" style="text-align: left;">
+                            "<span class="blue-hl">Metered billing</span>, or <span class="blue-hl">usage-based</span> billing, usually involves a fixed monthly fee plus an overage fee for additional usage beyond the included amounts. <br/>E.g mobile phone providers: pay $49/mo for 400 minutes, then $0.10 per additional minute of usage."
+                        </p>
+                    </section>
                 </section>
 
                 <section>
@@ -246,12 +312,14 @@
                     <ul>
                         <li>Commerce License <br/><a href="http://www.drupal.org/project/commerce_license">http://drupal.org/project/commerce_license</a></li>
                         <li>Commerce License Billing <br/><a href="http://www.drupal.org/project/commerce_license_billing">http://drupal.org/project/commerce_license_billing</a></li>
+                        <li>Commerce Card on File <br/><a href="http://www.drupal.org/project/commerce_cardonfile">http://drupal.org/project/commerce_cardonfile</a></li>
                         <li>Commerce Dunning <br/><a href="http://www.drupal.org/project/commerce_dunning">http://drupal.org/project/commerce_dunning</a></li>
                         <li>Commerce Guys Marketplace <br/><a href="http://marketplace.commerceguys.com">http://marketplace.commerceguys.com</a></li>
                     </ul>
                 </section>
+
                 <section>
-                    <h2>Questions?</h2>
+                    <h1>Questions?</h1>
                 </section>
 
 			</div>
