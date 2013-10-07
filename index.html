@@ -38,11 +38,18 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+                <section>
+                    <img src="media/drupalcamp-2013-logo.png" class="logo" alt=""/>
+                </section>
 				<section>
 					<h2>The newest developments in digital e-commerce</h2>
 					<p>
 						<small>Jonathan Sacksick / <a href="http://www.twitter.com/jsacksick">@jsacksick</a></small>
 					</p>
+                    <aside class="notes">
+                        Introducing the digital commerce ecosystem<br/>
+                        In other words what the products team of commerce guys has been working on the previous months.
+                    </aside>
 				</section>
                 <section data-background="media/jonathan_shadow_background.jpg">
                   <p style="font-size: 150%">Jonathan Sacksick</p>
@@ -70,13 +77,18 @@
                   <section data-background="media/dc-2-classicdriver.jpg" data-background-position="top center">
                       <h2>Built from scratch on Drupal 7</h2>
                       <aside class="notes">
+                          Built natively on drupal 7, using all of the core technologies, <br/>
                           Commerce doesn't reinvent the wheel, it uses the core concepts, entities, etc.
                       </aside>
                   </section>
                   <section data-background="media/dc-1-cartier.jpg" data-background-position="top center">
                       <h2>Minimalistic and flexible</h2>
                       <aside class="notes">
-                          Commerce doesn't make any assumption, you can sell physical &amp; digital products, you can remove the cart...
+                          Tries not to get in your way, <br/>
+                          Take only the parts that you need...<br/>
+                          If you don't like how commerce handle messages using rules, then use a contrib module to replace that (Commerce message)... Commerce order types ...<br/>
+                          Commerce doesn't make any assumption, you can sell physical &amp; digital products, you can remove the cart...<br/>
+                          Multisites, one backend, multi country, one of the most challenging/exciting project.
                       </aside>
                   </section>
                   <section data-background="media/dc-3-eurocentre.png" data-background-position="top center">
@@ -88,7 +100,9 @@
                   <section data-background="media/dc-4-eurostar.png" data-background-position="top center">
                       <h2>Uses Rules for business logic</h2>
                       <aside class="notes">
-                          Similar to a hook, you can respond to events, disable a rule, update the weight...<br/> Rules for selecting payment methods, tax rate etc.
+                          Similar to a hook, you can respond to events, disable a rule, update the weight...<br/>
+                          Exportable, reusable...<br/>
+                          Rules for selecting payment methods, tax rate etc.
                       </aside>
                   </section>
                   <section data-background="media/dc-5-krispy.png" data-background-position="top center">
@@ -141,6 +155,10 @@
                 <section>
                      <h2>Context / Requirements</h2>
                     <img src="media/logo-marketplace.png" class="logo" alt=""/>
+                    <aside class="notes">
+                        Thanks/because of the Marketplace, we had to build modules that I'm going to present.<br/>
+                        Marketplace offers everything you need to improve your online store, add-ons, trainings...
+                    </aside>
                  </section>
 
                 <section>
@@ -161,6 +179,7 @@
                     <h3>(Commerce Platform)</h3>
                     <img src="media/platform.png" class="logo" alt=""/>
                     <aside class="notes">
+                        Our cloud Platform,
                         This implies recurring billing, subscription renewal...
                     </aside>
                 </section>
@@ -217,11 +236,18 @@
                         <h2>Features</h2>
                         <p>A license can be <span class="blue-hl">remote/synchronized</span> with an external service.</p>
                         <img src="media/license-sync-completed.png" alt=""/>
+                        <aside class="notes">
+                            Talk about the status change (Retrigger sync when expires or revoked...).<br/>
+                            We're displaying the access details, could be application id, account email etc...
+                        </aside>
                     </section>
                     <section>
                         <h2>Features</h2>
                         <p>Licenses can be <span class="blue-hl">time limited</span>, and are automatically expired.</p>
                         <img src="media/commerce-license-configuration-2.png" alt=""/>
+                        <aside class="notes">
+                            A license can expire or not, i
+                        </aside>
                     </section>
                 </section>
 
@@ -263,7 +289,8 @@
                 <section class="shadowh2" data-background="media/recurring.jpg">
                     <h2>Recurring?</h2>
                     <aside class="notes">
-                        Recurring is really hard to implement. Explain async &amp; sync concepts. Talk about Recurly.
+                        Recurring is really hard to implement. Explain async &amp; sync concepts. Talk about Recurly.<br/>
+                        Probably talk about the mobile plan. You need to think about the payment, dunning...
                     </aside>
                 </section>
 
@@ -299,8 +326,15 @@
                     </aside>
                 </section>
 
+                <section class="shadowh2" data-background="media/calendar-day-1.jpg" data-background-position="top center">
+                    <h2>But wait, I always want to bill on the 1st of the month?</h2>
+                    <aside class="notes">
+                        It's really hard to implement because of prorating, If someone subscribe to a service on the 19th...<br/>
+                    </aside>
+                </section>
+
                 <section class="shadowh2" data-background="media/recurring-headache.jpg" data-background-position="top center">
-                    <h2>Synchronous billing is really hard to implement...</h2>
+                    <h2>Prorating?</h2>
                     <aside class="notes">
                         It's really hard to implement because of prorating, If someone subscribe to a service on the 19th...
                     </aside>
@@ -312,6 +346,8 @@
                         <img src="media/commerce-license-billing.png" alt=""/>
                         <aside class="notes">
                             Doesn't have a release yet.. Nested slides.
+                            Talk about the billing cycles (async monthly/weekly/...), sync<br/>
+                            Support pre-payment, post-payment.
                         </aside>
                     </section>
                     <section>
@@ -320,8 +356,21 @@
                     </section>
                     <section>
                         <h2>Features</h2>
+                        <p>It supports <span class="blue-hl">plan changing</span> in the middle of the billing cycle and <span class="blue-hl">free quantity</span>.</p>
+                        <aside class="notes">
+                            E.g talk about the Platform, (X-large, medium)...<br/>
+                            Talk about free quantity (Removed when calculating the total).<br/>
+                            We introduced the revisions to properly handle that.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Features</h2>
                         <p>It supports <span class="blue-hl">post payment</span> and <span class="blue-hl">estimation</span> calculation.</p>
                         <img src="media/post-payment-example.png" alt=""/>
+                        <aside class="notes">
+                            Instead of showing the actual order displaying a 0 amount, we're displaying the theme function.<br/>
+                            It properly handles VAT, discounts...
+                        </aside>
                     </section>
                     <section>
                         <h2>Features</h2>
