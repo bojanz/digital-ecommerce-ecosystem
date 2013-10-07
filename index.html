@@ -226,13 +226,38 @@
                 </section>
 
                 <section>
-                    <h2>Commerce file 2.x</h2>
-                    <img src="media/commerce-file.png" alt="" style="margin-top:0;"/>
-                    <aside class="notes">
-                        Allows access to files to be sold (one or multiple files attached to a product)<br/>
-                        Licensed files can be downloaded or streamed. Number of downloads / streams can be limited.<br/>
-                        Full Amazon S3 integration (triggering a download gets the file from S3 without touching our server).
-                    </aside>
+                    <section>
+                      <h2>Commerce File 2.x</h2>
+                      <img src="media/commerce-file1.jpg" alt="" style="margin-top:0;"/>
+                      <img src="media/commerce-file2.jpg" alt="" style="margin-top:0;"/>
+                      <aside class="notes">
+                          New architecture based on Commerce License, addresses all feedback
+                          received for the 1.x branch.
+                          Allows access to files to be sold (one or multiple files attached to a product)<br/>
+                          Licensed files can be downloaded or streamed. Number of downloads / streams can be limited.<br/>
+                          If an admin uploads new files to the product, they will show up
+                          automatically for all users. <br />
+                      </aside>
+                    </section>
+                    <section>
+                      <h2>Need streaming? No problem</h2>
+                      <img src="media/commerce-file3.png" alt="" style="margin-top:0;"/>
+                      <aside class="notes">
+                          Shown example uses mediaelement.js (library and drupal module) <br />
+                          Just like with downloads, the number of streams can be limited too.<br/>
+                          Only complete streams (start to finish) count.
+                      </aside>
+                    </section>
+                    <section>
+                      <h2>Full Amazon S3 integration</h2>
+                      <img src="media/amazon-s3-logo.png" alt="" style="margin-top:0;"/>
+                      <img src="media/amazon-s3-module.png" alt="" style="margin-top:0;"/>
+                      <aside class="notes">
+                          Triggering a download gets the file from S3 without touching our server. <br />
+                          Download limitations are respected.
+                          The S3 url is secret and temporary.
+                      </aside>
+                    </section>
                 </section>
 
                 <section class="shadowh2" data-background="media/recurring.jpg">
