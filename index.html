@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>The newest developments in digital ecommerce.</title>
+		<title>Introducing the digital commerce ecosystem</title>
 
 		<meta name="description" content="The newest developments in digital ecommerce">
-		<meta name="author" content="Jonathan Sacksick">
+		<meta name="author" content="Bojan Zivanovic">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -35,18 +35,12 @@
 	<body>
 
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h2>The newest developments in digital ecommerce</h2>
+					<h2>Introducing the digital commerce ecosystem</h2>
 					<p>
 						<small>Bojan Zivanovic / <a href="http://www.twitter.com/bojan_zivanovic">@bojan_zivanovic</a></small>
 					</p>
-                    <aside class="notes">
-                        Introducing the digital commerce ecosystem<br/>
-                        In other words what the products team of commerce guys has been working on the previous months.
-                    </aside>
 				</section>
                 <section data-background="media/bojan2.jpg">
                   <p style="font-size: 150%">Bojan Živanović</p>
@@ -58,20 +52,30 @@
                   </p>
                 </section>
                 <section>
-                     <h2>Context / Requirements</h2>
+                    <img src="media/cg.png" class="logo" /><br /><br /><br />
+                    <p>Paris, France &nbsp; &middot; &nbsp; London, England  &nbsp; &middot; &nbsp; Ann Arbor, MI, USA</p>
+                </section>
+
+                <section>
+                     <h2> Digital commerce </h2>
+                     <ul>
+                        <li> Downloadables (ebooks, songs, movies) </li>
+                        <li> Premium content </li>
+                        <li> Support </li>
+                        <li> Subscriptions (SaaS products) </li>
+                      </ul>
+                      <br /><br />
+                    <p>One time OR recurring</p>
+                 </section>
+
+                <section>
+                    <h2>Context</h2>
                     <img src="media/logo-marketplace.png" class="logo" alt=""/>
-                    <aside class="notes">
-                        Thanks/because of the Marketplace, we had to build modules that I'm going to present.<br/>
-                        Marketplace offers everything you need to improve your online store, add-ons, trainings...
-                    </aside>
                  </section>
 
                 <section>
                     <h2>Manage subscriptions to services</h2>
                     <img src="media/add-ons-marketplace.png" alt=""/>
-                    <aside class="notes">
-                        Talk about Jirafe, Yottaa...
-               		</aside>
                 </section>
 
                 <section>
@@ -97,10 +101,6 @@
                     </aside>
                 </section>
 
-                <!--<section>
-                    <h2>Solutions</h2>
-                </section>-->
-
                 <section data-transition="none">
                     <h2>A separate entity type</h2>
                     <img src="media/entities_schema_no_square_1.png" class="logo" alt=""/>
@@ -120,6 +120,11 @@
                     <h2>A separate entity type</h2>
                     <img src="media/entities_schema_no_square_4.png" class="logo" alt=""/>
                 </section>
+
+                <section>
+                    <h2>Entity Bundle Plugin</h2>
+                    <img src="media/entity-bundle-plugin.png" class="logo" alt=""/>
+                </section>
                 <section>
                     <section>
                         <h3>Commerce License</h3>
@@ -129,8 +134,9 @@
                         </aside>
                     </section>
                     <section>
-                        <h2>What is it?</h2>
-                        <p>It's a <span class="blue-hl">framework</span> for selling access to local or remote resources.</p>
+                        <h2>Features</h2>
+                        <p>Licenses can be <span class="blue-hl">time limited</span>, and are automatically expired.</p>
+                        <img src="media/commerce-license-configuration-2.png" alt=""/>
                     </section>
                     <section>
                         <h2>Features</h2>
@@ -146,14 +152,11 @@
                             We're displaying the access details, could be application id, account email etc...
                         </aside>
                     </section>
-                    <section>
-                        <h2>Features</h2>
-                        <p>Licenses can be <span class="blue-hl">time limited</span>, and are automatically expired.</p>
-                        <img src="media/commerce-license-configuration-2.png" alt=""/>
-                        <aside class="notes">
-                            A license can expire or not, i
-                        </aside>
-                    </section>
+                </section>
+
+                <section>
+                    <h2>Commerce License Role</h2>
+                    <img src="media/commerce-license-role.png" alt=""/>
                 </section>
 
                 <section>
@@ -192,11 +195,7 @@
                 </section>
 
                 <section class="shadowh2" data-background="media/recurring.jpg">
-                    <h2>Recurring?</h2>
-                    <aside class="notes">
-                        Recurring is really hard to implement. Explain async &amp; sync concepts. Talk about Recurly.<br/>
-                        Probably talk about the mobile plan. You need to think about the payment, dunning...
-                    </aside>
+                    <h2>Recurring</h2>
                 </section>
 
                 <section>
@@ -211,6 +210,72 @@
                 </section>
 
                 <section>
+                    <h2>Commerce recurring</h2>
+                    <img src="media/commerce-recurring.png" alt="" style="margin-top:0;"/>
+                </section>
+
+                <section>
+                    <h2>Pre-paid puppy subscription</h2>
+                    <img src="media/puppy.jpg" alt="" /> <br />
+                    <p>March 18, April 18, May 18</p>
+                </section>
+
+                <section>
+                    <h2>The real world</h2>
+                    <img src="media/verizon.png" alt="" /> <br />
+                    <img src="media/mailjet.png" alt="" /> <br />
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Commerce License billing</h2>
+                        <img src="media/commerce-license-billing.png" alt=""/>
+                    </section>
+                    <section>
+                        <h2>Features</h2>
+                        <p>It supports plans and <span class="blue-hl">plan changing</span>.</p>
+                        <img src="media/platform-plans.png" alt="" />
+                        <img src="media/postpone-plan-changes.png" alt="" />
+                    </section>
+                    <section>
+                        <h2>Features</h2>
+                        <p>It supports <span class="blue-hl">metered</span> billing.</p>
+                        <table>
+                        <tr>
+                            <td style="vertical-align: top"><img src="media/counter.jpg" alt="" /></td>
+                            <td style="vertical-align: top"><img src="media/gauge.jpg" alt="" /></td>
+                        </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Features</h2>
+                        <p><span class="blue-hl">Pre</span>payment, <span class="blue-hl">post</span>payment and <span class="blue-hl">estimations</span>. </p>
+                        <img src="media/post-payment-example.png" alt=""/>
+                        <aside class="notes">
+                            Instead of showing the actual order displaying a 0 amount, we're displaying the theme function.<br/>
+                            It properly handles VAT, discounts...
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Features</h2>
+                        <p>Synchronous and asynchronous billing cycles.</p>
+                        <p class="fragment">
+                        Or write your own plugin!
+                        <img src="media/lunar-tweet.png" alt=""/>
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>VAT</h2>
+                    <img src="media/commerce_vat2.jpg" alt="" style="margin-top: 0;"/>
+                    <p>Rate changes. B2B. VOES. You don't want to do this alone. </p>
+                    <aside class="notes">
+                        Defines VAT rates for all (EU) countries, B2B, VOES.
+                    </aside>
+                </section>
+
+                <section>
                     <h2>Dunning process</h2>
                     <p>What happens if I can't charge the user anymore?</p>
                     <img src="media/commerce-dunning.png" alt="" style="margin-top: 0;"/>
@@ -220,81 +285,6 @@
                         Soft decline (When the daily limit of the card has been exceeded)<br/>
                         Hard decline (Card is expired, cannot charge anymore).
                     </aside>
-                </section>
-
-                <section>
-                    <h2>Commerce recurring</h2>
-                    <img src="media/commerce-recurring.png" alt="" style="margin-top:0;"/>
-                    <aside class="notes">
-                        Only support async prepaid billing (No post-payment). Because sync billing is really hard to implement.<br/>
-                        Talk about prorated payment, doesn't handle metered billing.
-                    </aside>
-                </section>
-
-                <section class="shadowh2" data-background="media/calendar-day-1.jpg" data-background-position="top center">
-                    <h2>But wait, I always want to bill on the 1st of the month?</h2>
-                    <aside class="notes">
-                        It's really hard to implement because of prorating, If someone subscribe to a service on the 19th...<br/>
-                    </aside>
-                </section>
-
-                <section class="shadowh2" data-background="media/recurring-headache.jpg" data-background-position="top center">
-                    <h2>Prorating?</h2>
-                    <aside class="notes">
-                        It's really hard to implement because of prorating, If someone subscribe to a service on the 19th...
-                    </aside>
-                </section>
-
-                <section>
-                    <section>
-                        <h2>Commerce License billing</h2>
-                        <img src="media/commerce-license-billing.png" alt=""/>
-                        <aside class="notes">
-                            Doesn't have a release yet.. Nested slides.
-                            Talk about the billing cycles (async monthly/weekly/...), sync<br/>
-                            Support pre-payment, post-payment.
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>What is it?</h2>
-                        <p>Commerce License Billing provides advanced <span class="blue-hl">recurring</span> billing for licenses.</p>
-                    </section>
-                    <section>
-                        <h2>Features</h2>
-                        <p>It supports <span class="blue-hl">plan changing</span> in the middle of the billing cycle and <span class="blue-hl">free quantity</span>.</p>
-                        <aside class="notes">
-                            E.g talk about the Platform, (X-large, medium)...<br/>
-                            Talk about free quantity (Removed when calculating the total).<br/>
-                            We introduced the revisions to properly handle that.
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Features</h2>
-                        <p>It supports <span class="blue-hl">post payment</span> and <span class="blue-hl">estimation</span> calculation.</p>
-                        <img src="media/post-payment-example.png" alt=""/>
-                        <aside class="notes">
-                            Instead of showing the actual order displaying a 0 amount, we're displaying the theme function.<br/>
-                            It properly handles VAT, discounts...
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Features</h2>
-                        <p>It supports <span class="blue-hl">metered</span> billing.</p>
-                        <p class="fragment" style="text-align: left;">
-                            "<span class="blue-hl">Metered billing</span>, or <span class="blue-hl">usage-based</span> billing, usually involves a fixed monthly fee plus an overage fee for additional usage beyond the included amounts. <br/>E.g mobile phone providers: pay $49/mo for 400 minutes, then $0.10 per additional minute of usage."
-                        </p>
-                    </section>
-                </section>
-
-                <section>
-                    <h2>Resources</h2>
-                    <ul>
-                        <li>Commerce License <br/><a href="http://www.drupal.org/project/commerce_license">http://drupal.org/project/commerce_license</a></li>
-                        <li>Commerce License Billing <br/><a href="http://www.drupal.org/project/commerce_license_billing">http://drupal.org/project/commerce_license_billing</a></li>
-                        <li>Commerce Card on File <br/><a href="http://www.drupal.org/project/commerce_cardonfile">http://drupal.org/project/commerce_cardonfile</a></li>
-                        <li>Commerce Dunning <br/><a href="http://www.drupal.org/project/commerce_dunning">http://drupal.org/project/commerce_dunning</a></li>
-                        <li>Commerce Guys Marketplace <br/><a href="http://marketplace.commerceguys.com">http://marketplace.commerceguys.com</a></li>
-                    </ul>
                 </section>
 
                 <section>

@@ -1,4 +1,11 @@
-The newest developments in digital e-commerce.
-==============================================
+Introducing the digital commerce ecosystem.
+===========================================
 
-Slides for the Drupalcamp Tel Aviv (by Jonathan Sacksick) / BADCamp and DrupalCamp Vienna (by Bojan Zivanovic).
+By Jonathan Sacksick:
+
+- Drupalcamp Tel Aviv (by Jonathan Sacksick)
+
+By Bojan Zivanovic:
+
+- BADCamp 2013
+- Drupal Developer Days Szeged 2014
